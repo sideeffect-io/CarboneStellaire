@@ -7,17 +7,20 @@ Bilingual Astro static site for Carbone Stellaire, designed for Netlify.
 ```bash
 npm install
 npm run dev
-npm run sync-content
-npm run validate:catalog
+npm run validate:content
 npm run build
 npm run preview
 ```
 
 ## Content
 
-- French brand copy comes from `../carbonestellaire.md`.
-- French product data comes from `../Products/*/index.md`.
-- English product translations live in `src/content/i18n/products/*.en.md`.
-- Carousel and product images are optimized into `public/content/`.
+The Astro app is the source of truth:
 
-See `docs/publishing-new-knife.md` before adding a new catalog item.
+- site copy and price visibility: `src/content/site.json`
+- categories and range stories: `src/content/catalog/categories.json`
+- products: `src/content/products/*.json`
+- carousel order and alt text: `src/content/carousel.json`
+- logo and images: `src/assets/`
+
+The local admin writes those same files directly. See
+`docs/publishing-new-knife.md` before adding a new catalog item manually.

@@ -1,0 +1,23 @@
+{
+  "handle": "cyber-edge-sanmai-inox-et-chene-des-marais",
+  "categoryId": "cyber-edge",
+  "price": "310.00 EUR TTC",
+  "title": {
+    "fr": "Cyber Edge SanMaì inox et Chêne des marais",
+    "en": "Cyber Edge SanMaì inox et bog oak"
+  },
+  "description": {
+    "fr": "Le \"Cyber Edge\" est couteau de table ou de cuisine à l'allure radicale. Il est réalisé de façon artisanale.\n\nSa lame, en acier inoxydable 3 couches \"SanMaï\", est forgée à la main. La lame est intégrée au manche grâce à un montage sur soie semi-noyée. La soie présente également un guillochage.\n\nSon manche est en Chêne des marais (Morta). Il présente un insert sous forme d'un composant électronique pris dans de la résine transparente. Il présente également une gravure \"Cyber Edge\" comblée de résine Epoxy nacrée.",
+    "en": "A hand-forged radical table or kitchen knife from the Cyber Edge range, made in the Carbone Stellaire workshop.\nThe range blends hand-forged steel with a sharper cybernetic vocabulary: resin, inserts, electronics-inspired details, and precise lines.\nThis version highlights stainless steel, San Mai laminated steel, bog oak.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.jpg",
+    "image-007.jpg",
+    "image-008.png"
+  ]
+}

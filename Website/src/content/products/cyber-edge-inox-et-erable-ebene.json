@@ -1,0 +1,20 @@
+{
+  "handle": "cyber-edge-inox-et-erable-ebene",
+  "categoryId": "cyber-edge",
+  "price": "300.00 EUR TTC",
+  "title": {
+    "fr": "Cyber Edge Inox et Acacia",
+    "en": "Cyber Edge stainless steel et Acacia"
+  },
+  "description": {
+    "fr": "Le \"Cyber Edge\" est couteau de table ou de cuisine à l'allure radicale. Il est réalisé de façon artisanale.\n\nSa lame, en acier inoxydable 14C28N , est forgée à la main. La lame est intégrée au manche grâce à un montage sur soie noyée. La lame présente également un léger guillochage.\n\nSon manche est en Acacia avec un insert en résine Epoxy noir/bleuté. Il présente également une gravure \"Cyber Edge\" comblée de résine Epoxy bleue électrique.",
+    "en": "A hand-forged radical table or kitchen knife from the Cyber Edge range, made in the Carbone Stellaire workshop.\nThe range blends hand-forged steel with a sharper cybernetic vocabulary: resin, inserts, electronics-inspired details, and precise lines.\nThis version highlights stainless steel.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.png"
+  ]
+}

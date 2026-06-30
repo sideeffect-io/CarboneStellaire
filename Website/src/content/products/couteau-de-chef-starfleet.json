@@ -1,0 +1,21 @@
+{
+  "handle": "couteau-de-chef-starfleet",
+  "categoryId": "scifi-legends",
+  "price": "405.00 EUR TTC",
+  "title": {
+    "fr": "Couteau de chef Starfleet",
+    "en": "Chef knife Starfleet"
+  },
+  "description": {
+    "fr": "Ce couteau est immédiat identifiable à l'univers de Star Trek et plus particulièrement celui de Starfleet. Il reprend les codes couleurs et le design des uniformes des officiers de l'Enterprise.\n\nSa lame est forgée à la main en acier inoxydable 14C28N . Elle présente un aspect \"Brute de forge\" et un guillochage au niveau de la soie. Sa forme globale rappelle bien évidemment les lignes du logo de Starfleet.\n\nLe logo de Starfleet est gravé au laser sur le dessus du manche et il est comblé de résine Epoxy mélangée avec de la poussière de laiton.\n\nSon manche est en Red Heart et en résine Epoxy noire. La lame y est rivetée avec 4 rivets en laiton symbolisant le grade de capitaine porté au col de l'uniforme de Picard.",
+    "en": "A hand-forged chef knife from the SciFi Legends range, made in the Carbone Stellaire workshop.\nThis piece translates science-fiction references into a functional forged object, with each detail designed as part of the story.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.png"
+  ]
+}

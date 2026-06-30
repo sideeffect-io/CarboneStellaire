@@ -1,0 +1,22 @@
+{
+  "handle": "edge-of-space-san-mai-et-loupe-derable",
+  "categoryId": "edge-of-space",
+  "price": "340.00 EUR TTC",
+  "title": {
+    "fr": "Edge Of Space San Maï et loupe de Frêne stabilisée",
+    "en": "Edge Of Space San Mai et burl de ash stabilisée"
+  },
+  "description": {
+    "fr": "Le \"Edge Of Space\" est un élégant couteau de table. Il est réalisé de façon artisanale.\n\nSa lame, en acier carbone 3 couches \"San Maï\" fait maison, est forgée à la main. Elle présente une patine foncée. La lame est intégrée au manche grâce à un montage sur soie semi-noyée et elle présente un guillochage sur le dessus de la soie.\n\nSon manche est en loupe de Frêne stabilisée avec un insert en Zirconium gravé \"EoS\".\n\nL'acier carbone nécessite un entretien particulier. N'étant pas inoxydable il est sensible à la rouille. De plus, en fonction des aliments avec lesquels il rentre en contact, il peut noircir (il se patine). Il est recommandé de toujours le sécher rapidement après usage et de huiler la lame (elle a été traitée en atelier avec une cire afin de limiter l'oxydation).",
+    "en": "A hand-forged table knife from the Edge Of Space range, made in the Carbone Stellaire workshop.\nThe range pairs a slim, elegant silhouette with forged steel, visible construction details, and carefully selected handle materials.\nThis version highlights San Mai laminated steel, ash.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.jpg",
+    "image-007.png"
+  ]
+}

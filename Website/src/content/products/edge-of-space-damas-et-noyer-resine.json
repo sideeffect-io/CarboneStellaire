@@ -1,0 +1,23 @@
+{
+  "handle": "edge-of-space-damas-et-noyer-resine",
+  "categoryId": "edge-of-space",
+  "price": "340.00 EUR TTC",
+  "title": {
+    "fr": "Edge Of Space Damas et Noyer/Résine",
+    "en": "Edge Of Space damascus steel et walnut/Résine"
+  },
+  "description": {
+    "fr": "Le \"Edge Of Space\" est un élégant couteau de table. Il est réalisé de façon artisanale.\n\nSa lame, en acier damas inoxydable Suminagashi , est forgée à la main. Elle est composé d'un coeur en acier VG10 et de 66 couches d'acier inoxydable sur les flans. La lame est intégrée au manche grâce à un montage sur soie semi-noyée et elle présente un guillochage sur le dessus de la soie.\n\nSon manche est en Noyer comblé avec de la résine Epoxy translucide et nacrée. Il présente un insert en Micarta noir ainsi qu'une discrète gravure \"EoS\" comblée de résine Epoxy.",
+    "en": "A hand-forged table knife from the Edge Of Space range, made in the Carbone Stellaire workshop.\nThe range pairs a slim, elegant silhouette with forged steel, visible construction details, and carefully selected handle materials.\nThis version highlights damascus steel, resin, walnut.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.jpg",
+    "image-007.jpg",
+    "image-008.png"
+  ]
+}

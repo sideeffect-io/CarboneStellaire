@@ -1,0 +1,20 @@
+{
+  "handle": "le-sciotot-longboard-inox-et-morta",
+  "categoryId": "le-sciotot",
+  "price": "375.00 EUR TTC",
+  "title": {
+    "fr": "Le Sciotot \"Longboard\" inox et Morta",
+    "en": "Le Sciotot \\\"Longboard\\\" inox et bog oak"
+  },
+  "description": {
+    "fr": "Le Sciotot \"Longboard\" est un couteau de cuisine. Il est réalisé de façon artisanale.\n\nSa lame, en acier inoxydable suédois 14C28N , est forgée à la main. Son manche est en Morta (Chêne des marais vieux de 1400 ans) avec une incrustation en bois d'Aubépine gravée au laser.\n\nIl présente un léger guillochage sur sa partie supérieure.\n\nSa forme rappelle une planche de surf en hommage à la plage de Sciotot dans le nord Cotentin. Il offre une bonne prise en main grâce à l'encoche du manche en forme de vague.",
+    "en": "A hand-forged longboard-style knife from the Le Sciotot range, made in the Carbone Stellaire workshop.\nThe range is shaped as a tribute to Sciotot beach in the north Cotentin, with a compact profile and a wave-like handle cutout.\nThis version highlights stainless steel, bog oak.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.png"
+  ]
+}

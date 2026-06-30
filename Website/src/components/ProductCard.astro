@@ -12,7 +12,7 @@ const image = product.images[0];
 const showPrices = shouldShowPrices();
 ---
 
-<article class="product-card" data-reveal>
+<article class:list={["product-card", !showPrices && "product-card--price-hidden"]} data-reveal>
   <a href={productPath(locale, product.handle)} aria-label={product.title}>
     <figure>
       <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />

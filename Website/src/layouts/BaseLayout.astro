@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import logoUrl from "@/assets/logo.png";
 import { alternateLocale, contactPath, homePath, type Locale, ui } from "@/lib/i18n";
 
 interface Props {
@@ -22,12 +23,12 @@ const pageTitle = title === "Carbone Stellaire" ? title : `${title} | Carbone St
     <meta name="description" content={description} />
     <meta name="theme-color" content="#08090b" />
     <title>{pageTitle}</title>
-    <link rel="icon" href="/logo.png" />
+    <link rel="icon" href={logoUrl.src} />
   </head>
   <body>
     <header class="site-header">
       <a class="brand-mark" href={homePath(locale)} aria-label="Carbone Stellaire">
-        <img class="brand-logo" src="/logo.png" alt="" width="42" height="42" aria-hidden="true" />
+        <img class="brand-logo" src={logoUrl.src} alt="" width="42" height="42" aria-hidden="true" />
         <span>Carbone Stellaire</span>
       </a>
       <nav class="site-nav" aria-label={locale === "fr" ? "Navigation principale" : "Main navigation"}>
@@ -46,7 +47,7 @@ const pageTitle = title === "Carbone Stellaire" ? title : `${title} | Carbone St
     <footer class="site-footer">
       <div>
         <a class="brand-mark" href={homePath(locale)} aria-label="Carbone Stellaire">
-          <img class="brand-logo" src="/logo.png" alt="" width="42" height="42" aria-hidden="true" />
+          <img class="brand-logo" src={logoUrl.src} alt="" width="42" height="42" aria-hidden="true" />
           <span>Carbone Stellaire</span>
         </a>
         <p>thibault@carbonestellaire.fr</p>

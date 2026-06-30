@@ -3,14 +3,12 @@ import Carousel from "@/components/Carousel.astro";
 import CategoryBand from "@/components/CategoryBand.astro";
 import ProductGrid from "@/components/ProductGrid.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import carouselImages from "@/data/carousel.generated.json";
-import siteData from "@/data/site.generated.json";
-import { getFeaturedProducts } from "@/lib/catalog";
+import { carouselImages, getFeaturedProducts, siteContent } from "@/lib/catalog";
 import { contactPath, ui } from "@/lib/i18n";
 
 const locale = "fr";
 const copy = ui[locale];
-const sections = siteData[locale];
+const sections = siteContent[locale];
 const story = sections[0];
 const process = sections[1];
 const workshop = sections[2];

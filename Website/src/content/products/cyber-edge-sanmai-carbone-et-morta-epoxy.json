@@ -1,0 +1,20 @@
+{
+  "handle": "cyber-edge-sanmai-carbone-et-morta-epoxy",
+  "categoryId": "cyber-edge",
+  "price": "385.00 EUR TTC",
+  "title": {
+    "fr": "Cyber Edge SanMaï carbone et Morta/Epoxy",
+    "en": "Cyber Edge San Mai carbone et bog oak/Epoxy"
+  },
+  "description": {
+    "fr": "Le \"Cyber Edge\" est couteau de table ou de cuisine à l'allure radicale. Il est réalisé de façon artisanale.\n\nSa lame est en acier feuilleté 3 couches (ou SanMaï ) réalisé à la main. Les 3 couches ont été soudées à la forge puis forgées au marteau pour obtenir cette forme acérée. Son coeur est en acier carbone 80CRV2 et ses cotés en vieux fer récupéré sur un soc de charrue centenaire. La lame est intégrée au manche grâce à un montage sur soie semi-noyée, celle-ci étant subtilement guillochée.\n\nSon manche est en Chêne des marais (ou Morta ) vieux de 1400 ans. Il présente un premier insert en résine Epoxy bleue nacrée puis un second sur le dessus en bois d'Acacia gravé \"Cyber Edge\".\n\nAttention: L'acier carbone nécessite un entretien particulier. N'étant pas inoxydable il est sensible à la rouille. De plus, en fonction des aliments avec lesquels il rentre en contact, il peut noircir (il se patine). Il est recommandé de toujours le sécher rapidement après usage et de huiler la lame (elle a été traitée en atelier avec une cire afin de limiter l'oxydation).",
+    "en": "A hand-forged radical table or kitchen knife from the Cyber Edge range, made in the Carbone Stellaire workshop.\nThe range blends hand-forged steel with a sharper cybernetic vocabulary: resin, inserts, electronics-inspired details, and precise lines.\nThis version highlights carbon steel, San Mai laminated steel, bog oak, epoxy resin.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.png"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "handle": "edge-of-space-cumai-et-etre-echauffe",
+  "categoryId": "edge-of-space",
+  "price": "345.00 EUR TTC",
+  "title": {
+    "fr": "Edge Of Space CuMaï et Hêtre échauffé",
+    "en": "Edge Of Space CuMaï et spalted beech"
+  },
+  "description": {
+    "fr": "Le \"Edge Of Space\" est un élégant couteau de table. Il est réalisé de façon artisanale.\n\nSa lame, en acier carbone CuMaï, est forgée à la main. Elle est composée d'un coeur en acier 80CRV2 pris en sandwich entre des couches de Cuivre et d'acier 80CRV2. Cette technique de forge permet d'obtenir un effet \"éclair rouge\" sur fond noir. La lame est intégrée au manche grâce à un montage sur soie noyée.\n\nSon manche est en Hêtre échauffé stabilisé et en Bouleau madré noir stabilisé.",
+    "en": "A hand-forged table knife from the Edge Of Space range, made in the Carbone Stellaire workshop.\nThe range pairs a slim, elegant silhouette with forged steel, visible construction details, and carefully selected handle materials.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg"
+  ]
+}

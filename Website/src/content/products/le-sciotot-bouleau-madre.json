@@ -1,0 +1,21 @@
+{
+  "handle": "le-sciotot-bouleau-madre",
+  "categoryId": "le-sciotot",
+  "price": "220.00 EUR TTC",
+  "title": {
+    "fr": "Le Sciotot Inox et Bouleau Madré",
+    "en": "Le Sciotot stainless steel et curly birch"
+  },
+  "description": {
+    "fr": "Le Sciotot est un petit couteau de cuisine ou un couteau de table. Il est réalisé de façon artisanale.\n\nSa lame, en acier inoxydable 14C28N, est forgée à la main. Son manche est en Bouleau Madré avec une incrustation en résine Epoxy multicolore. Le manche présente un guillochage sur sa face supérieure.\n\nSa forme rappelle une planche de surf en hommage à la plage de Sciotot dans le nord Cotentin. Il est compact mais offre une bonne prise en main grâce à l'encoche du manche en forme de vague.",
+    "en": "A hand-forged compact table or kitchen knife from the Le Sciotot range, made in the Carbone Stellaire workshop.\nThe range is shaped as a tribute to Sciotot beach in the north Cotentin, with a compact profile and a wave-like handle cutout.\nThis version highlights stainless steel, curly birch.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.png"
+  ]
+}

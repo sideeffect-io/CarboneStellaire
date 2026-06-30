@@ -1,0 +1,23 @@
+{
+  "handle": "edge-of-space-pliant-damax-et-bois-de-fer",
+  "categoryId": "edge-of-space",
+  "price": "320.00 EUR TTC",
+  "title": {
+    "fr": "Edge Of Space pliant Damas et bois de fer",
+    "en": "Edge Of Space folding damascus steel et ironwood"
+  },
+  "description": {
+    "fr": "Le \"Edge Of Space\" est un élégant couteau de table. Il est réalisé de façon artisanale.\n\nIl est maintenant disponible en version pliant à friction. La lame est contrainte par le serrage du manche au niveau de l'axe. Ce serrage est réglable pas vissage.\n\nSa lame, en acier inoxydable feuilleté, est forgée à la main. Elle est composée de 135 couches alternées de 19C27 et de 7C27Mo2 , assemblées par le fabricant suédois Aleima sous l'appellation Damax . Elle présente un guillochage sur son épine dorsale.\n\nSon manche est en bois de fer d'Arizona . C'est un bois très compact et très résistant. Il est comblé de résine Epoxy bleue nacrée et se termine par un insert en Micarta noir. Il présente une gravure laser \"EoS\" (pour Edge of Space) comblée de résine.",
+    "en": "A hand-forged friction-folder knife from the Edge Of Space range, made in the Carbone Stellaire workshop.\nThe range pairs a slim, elegant silhouette with forged steel, visible construction details, and carefully selected handle materials.\nThis version highlights damascus steel, ironwood.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.jpg",
+    "image-007.jpg",
+    "image-008.png"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "handle": "edge-of-space-inox-et-genevrier",
+  "categoryId": "edge-of-space",
+  "price": "285.00 EUR TTC",
+  "title": {
+    "fr": "Edge Of Space Inox et Génévrier",
+    "en": "Edge Of Space stainless steel et Génévrier"
+  },
+  "description": {
+    "fr": "Le \"Edge Of Space\" est un élégant couteau de table. Il est réalisé de façon artisanale.\n\nSa lame, en acier inoxydable 14C28N , est forgée à la main. La lame est intégrée au manche grâce à un montage sur soie noyée. La lame présente également un léger guillochage.\n\nSon manche est en bois de Genévrier avec un insert en loupe de Peuplier stabilisée bleu/vert. Il présente également une gravure \"EoS\" comblée de résine Epoxy sur un insert de corne de boeuf.",
+    "en": "A hand-forged table knife from the Edge Of Space range, made in the Carbone Stellaire workshop.\nThe range pairs a slim, elegant silhouette with forged steel, visible construction details, and carefully selected handle materials.\nThis version highlights stainless steel, juniper.\nEach piece is shaped, heat-treated, finished, and assembled by hand. Contact the workshop for availability, care advice, or a custom variation."
+  },
+  "images": [
+    "image-001.jpg",
+    "image-002.jpg",
+    "image-003.jpg",
+    "image-004.jpg",
+    "image-005.jpg",
+    "image-006.png"
+  ]
+}

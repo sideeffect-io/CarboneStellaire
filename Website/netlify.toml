@@ -3,7 +3,7 @@ command = "npm run build"
 publish = "dist"
 
 [build.environment]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
 
 [[headers]]
 for = "/*"
@@ -11,8 +11,3 @@ for = "/*"
 X-Frame-Options = "DENY"
 X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin-when-cross-origin"
-
-[[headers]]
-for = "/content/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"

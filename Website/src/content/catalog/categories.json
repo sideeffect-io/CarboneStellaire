@@ -1,0 +1,58 @@
+[
+  {
+    "id": "le-sciotot",
+    "prefix": "le-sciotot",
+    "name": "Le Sciotot",
+    "short": {
+      "fr": "Couteaux compacts inspirés par la plage de Sciotot.",
+      "en": "Compact knives inspired by Sciotot beach."
+    },
+    "detail": {
+      "fr": "Le Sciotot se décline en 4 versions:\n\nun petit couteau de cuisine/utilitaire à tout faire\nun couteau de cuisine complet dans son édition \"Longboard\"\nun couteau à huitres\nun pendentif estival en forme de surf\nToutes sont réalisées de façon artisanale et leur acier est entièrement forgée à la main.\n\nLes formes rappellent une planche de surf en hommage à la fabuleuse plage de Sciotot dans le nord Cotentin.",
+      "en": "Le Sciotot comes in four versions:\n\n- a small all-purpose kitchen or utility knife\n- a full kitchen knife in its Longboard edition\n- an oyster knife\n- a summer pendant shaped like a surfboard\n\nAll are handmade, and their steel is fully forged by hand.\n\nThe shapes recall a surfboard as a tribute to the remarkable Sciotot beach in north Cotentin."
+    },
+    "fallback": false
+  },
+  {
+    "id": "edge-of-space",
+    "prefix": "edge-of-space",
+    "name": "Edge Of Space",
+    "short": {
+      "fr": "Lignes élégantes, aciers feuilletés et matériaux expressifs.",
+      "en": "Elegant lines, laminated steel, and expressive materials."
+    },
+    "detail": {
+      "fr": "Le \"Edge Of Space\" est un couteau de table élégant à la fois moderne et incisif avec ses facettes acérées et sa lame plongeante tout en conservant une ligne intemporelle avec son manche élancé et courbé.\n\nIl se décline à la fois en couteau fixe et couteau pliant.\n\nJe l'ai conçu comme un couteau qui serait remis à tous les astronautes explorateurs de l'espace fraichement diplômés. A la fois comme un symbole des outils anciens qui pouvaient sauver une vie en mission d'exploration et comme un exemple du savoir faire humain.",
+      "en": "The Edge Of Space is an elegant table knife, both modern and incisive, with sharp facets and a dropping blade while keeping a timeless line through its slender, curved handle.\n\nIt comes as both a fixed knife and a folding knife.\n\nI designed it as the knife that would be issued to every newly graduated astronaut explorer: both a symbol of the ancient tools that could save a life during an exploration mission, and an example of human craft."
+    },
+    "fallback": false
+  },
+  {
+    "id": "cyber-edge",
+    "prefix": "cyber-edge",
+    "name": "Cyber Edge",
+    "short": {
+      "fr": "Une gamme radicale aux détails résine, inserts et cybernétique.",
+      "en": "A radical range with resin, inserts, and cybernetic details."
+    },
+    "detail": {
+      "fr": "Le \"Cyber Edge\" est un couteau qui peut servir en cuisine ou à table. Son design est acéré et anguleux. Sa prise en main est confortable grace à un manche présentant un large retour à son extrémité.\n\nJe l'ai conçu comme un couteau venant d'un futur dystopique où il serait fabriqué sur une planète à l'ambiance Cyber punk et colonisée par la race humaine pour y déporter son activité industrielle.",
+      "en": "The Cyber Edge is a knife that can be used in the kitchen or at the table. Its design is sharp and angular. The grip is comfortable thanks to a handle with a wide return at the end.\n\nI imagined it as a knife from a dystopian future, made on a cyberpunk planet colonized by humankind to relocate its industrial activity."
+    },
+    "fallback": false
+  },
+  {
+    "id": "scifi-legends",
+    "prefix": "",
+    "name": "SciFi Legends",
+    "short": {
+      "fr": "Pièces de collection forgées autour d'icônes de science-fiction.",
+      "en": "Collector pieces forged around science-fiction icons."
+    },
+    "detail": {
+      "fr": "Cette collection regroupe des couteaux exceptionnels inspirés de sagas  de science-fiction iconiques. \n\nChaque grand franchise de science fiction possède ses codes, son esthétique, ses couleurs. Ils identifient immédiatement leurs univers : les uniformes dans Star Trek, les sabres-lasers dans Star Wars, les vers dans Dune, la jungle dans Predator ou l'alien ... dans Alien.\n\nCette collection regroupe des créations coutelières artisanales qui rendent hommage à ces univers et mondes lointains qui m'inspirent au quotidien.",
+      "en": "This collection brings together exceptional knives inspired by iconic science-fiction sagas.\n\nEvery major sci-fi franchise has its own codes, aesthetic, and colors. They instantly identify their worlds: the uniforms in Star Trek, lightsabers in Star Wars, worms in Dune, the jungle in Predator, or the xenomorph in Alien.\n\nThis collection gathers handmade knife creations that pay tribute to the universes and distant worlds that inspire me every day."
+    },
+    "fallback": true
+  }
+]
