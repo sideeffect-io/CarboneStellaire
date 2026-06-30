@@ -1,0 +1,117 @@
+---
+import "@/styles/global.css";
+import { alternateLocale, contactPath, homePath, type Locale, ui } from "@/lib/i18n";
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  alternatePath?: string;
+}
+
+const { title, description, locale, alternatePath = homePath(alternateLocale(locale)) } = Astro.props;
+const copy = ui[locale];
+const pageTitle = title === "Carbone Stellaire" ? title : `${title} | Carbone Stellaire`;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#08090b" />
+    <title>{pageTitle}</title>
+    <link rel="icon" href="/logo.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-mark" href={homePath(locale)} aria-label="Carbone Stellaire">
+        <img class="brand-logo" src="/logo.png" alt="" width="42" height="42" aria-hidden="true" />
+        <span>Carbone Stellaire</span>
+      </a>
+      <nav class="site-nav" aria-label={locale === "fr" ? "Navigation principale" : "Main navigation"}>
+        <a href={`${homePath(locale)}#ranges`}>{copy.nav.ranges}</a>
+        <a href={`${homePath(locale)}#atelier`}>{copy.nav.workshop}</a>
+        <a href={`${homePath(locale)}#process`}>{copy.nav.process}</a>
+        <a href={contactPath(locale)}>{copy.nav.contact}</a>
+        <a class="language-link" href={alternatePath} hreflang={alternateLocale(locale)}>
+          {copy.alternateLocaleName}
+        </a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div>
+        <a class="brand-mark" href={homePath(locale)} aria-label="Carbone Stellaire">
+          <img class="brand-logo" src="/logo.png" alt="" width="42" height="42" aria-hidden="true" />
+          <span>Carbone Stellaire</span>
+        </a>
+        <p>thibault@carbonestellaire.fr</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href={`${homePath(locale)}#ranges`}>{copy.nav.ranges}</a>
+        <a href={contactPath(locale)}>{copy.nav.contact}</a>
+        <a href={alternatePath} hreflang={alternateLocale(locale)}>{copy.alternateLocaleName}</a>
+      </nav>
+    </footer>
+    <script>
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll("[data-reveal]").forEach((element) => revealObserver.observe(element));
+
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        const track = carousel.querySelector("[data-carousel-track]");
+        if (!(track instanceof HTMLElement)) return;
+        let paused = false;
+        carousel.addEventListener("pointerdown", () => {
+          paused = true;
+        });
+        carousel.addEventListener("focusin", () => {
+          paused = true;
+        });
+        window.setInterval(() => {
+          if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+          const next = track.scrollLeft + track.clientWidth * 0.72;
+          const limit = track.scrollWidth - track.clientWidth - 8;
+          track.scrollTo({ left: next >= limit ? 0 : next, behavior: "smooth" });
+        }, 4200);
+      });
+
+      document.querySelectorAll("[data-product-gallery]").forEach((gallery) => {
+        const main = gallery.querySelector("[data-gallery-main]");
+        const thumbs = Array.from(gallery.querySelectorAll("[data-gallery-thumb]"));
+        if (!(main instanceof HTMLImageElement)) return;
+
+        thumbs.forEach((thumb) => {
+          if (!(thumb instanceof HTMLElement)) return;
+          thumb.addEventListener("click", () => {
+            const src = thumb.dataset.gallerySrc;
+            if (!src) return;
+            main.src = src;
+            main.alt = thumb.dataset.galleryAlt ?? "";
+            thumbs.forEach((item) => item.setAttribute("aria-pressed", item === thumb ? "true" : "false"));
+          });
+        });
+      });
+
+      const interest = document.querySelector("[data-interest-input]");
+      if (interest instanceof HTMLInputElement) {
+        const value = new URLSearchParams(window.location.search).get("knife");
+        if (value) interest.value = value;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+---
+import { thanksPath, type Locale, ui } from "@/lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = ui[locale].contact;
+const formName = locale === "fr" ? "contact-fr" : "contact-en";
+---
+
+<form class="contact-form" name={formName} method="POST" data-netlify="true" netlify-honeypot="bot-field" action={thanksPath(locale)}>
+  <input type="hidden" name="form-name" value={formName} />
+  <p class="honeypot">
+    <label>
+      Do not fill this field
+      <input name="bot-field" tabindex="-1" autocomplete="off" />
+    </label>
+  </p>
+  <label>
+    <span>{copy.name}</span>
+    <input name="name" autocomplete="name" required />
+  </label>
+  <label>
+    <span>{copy.email}</span>
+    <input type="email" name="email" autocomplete="email" required />
+  </label>
+  <label>
+    <span>{copy.interest}</span>
+    <input name="interest" data-interest-input autocomplete="off" />
+  </label>
+  <label class="contact-form__message">
+    <span>{copy.message}</span>
+    <textarea name="message" rows="7" required></textarea>
+  </label>
+  <button class="button button--primary" type="submit">{copy.submit}</button>
+</form>

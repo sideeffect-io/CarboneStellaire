@@ -1,0 +1,72 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCategory, getProducts, shouldShowPrices, type Product } from "@/lib/catalog";
+import { categoryPath, contactPath, formatPrice, productPath, ui } from "@/lib/i18n";
+
+export function getStaticPaths() {
+  return getProducts("en").map((product) => ({
+    params: { handle: product.handle },
+    props: { product }
+  }));
+}
+
+const locale = "en";
+const { product } = Astro.props as { product: Product };
+const category = getCategory(product.category);
+const contactHref = `${contactPath(locale)}?knife=${encodeURIComponent(product.title)}`;
+const showPrices = shouldShowPrices();
+const pageDescription = showPrices ? `${product.title} - ${formatPrice(product.price, locale)}.` : `${product.title}.`;
+---
+
+<BaseLayout
+  title={product.title}
+  description={pageDescription}
+  locale={locale}
+  alternatePath={productPath("fr", product.handle)}
+>
+  <article class="product-page">
+    <section class="product-page__hero">
+      <div class="product-gallery" data-product-gallery>
+        <figure class="product-gallery__main">
+          <img
+            src={product.images[0].src}
+            alt={product.images[0].alt}
+            loading="eager"
+            decoding="async"
+            data-gallery-main
+          />
+        </figure>
+        <div class="product-gallery__thumbs" aria-label={ui[locale].product.gallery}>
+          {
+            product.images.map((image, index) => (
+              <button
+                class="product-gallery__thumb"
+                type="button"
+                data-gallery-thumb
+                data-gallery-src={image.src}
+                data-gallery-alt={image.alt}
+                aria-label={`${ui[locale].product.gallery} ${index + 1}`}
+                aria-pressed={index === 0 ? "true" : "false"}
+              >
+                <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+              </button>
+            ))
+          }
+        </div>
+      </div>
+      <div class="product-summary" data-reveal>
+        <a class="back-link" href={categoryPath(locale, category.id)}>{ui[locale].product.backToRange}</a>
+        <p class="eyebrow">{ui[locale].product.from} / {category.name}</p>
+        <h1>{product.title}</h1>
+        {showPrices && <p class="product-price">{formatPrice(product.price, locale)}</p>}
+        <a class="button button--primary" href={contactHref}>{ui[locale].product.contact}</a>
+      </div>
+    </section>
+    <section class="section product-detail">
+      <div>
+        <p class="eyebrow">{ui[locale].product.details}</p>
+        <div class="rich-text" set:html={product.descriptionHtml} />
+      </div>
+    </section>
+  </article>
+</BaseLayout>

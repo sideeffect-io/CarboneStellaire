@@ -1,0 +1,16 @@
+---
+import type { Product } from "@/lib/catalog";
+import type { Locale } from "@/lib/i18n";
+import ProductCard from "./ProductCard.astro";
+
+interface Props {
+  products: Product[];
+  locale: Locale;
+}
+
+const { products, locale } = Astro.props;
+---
+
+<div class="product-grid">
+  {products.map((product) => <ProductCard product={product} locale={locale} />)}
+</div>

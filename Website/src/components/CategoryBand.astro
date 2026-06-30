@@ -1,0 +1,28 @@
+---
+import { categories, categoryDescription, getProductsByCategory } from "@/lib/catalog";
+import { categoryPath, type Locale } from "@/lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const itemLabel = locale === "fr" ? "pièces" : "pieces";
+---
+
+<div class="category-band">
+  {
+    categories.map((category) => {
+      const products = getProductsByCategory(locale, category.id);
+      const lead = products[0]?.images[0];
+      return (
+        <a class="category-tile" href={categoryPath(locale, category.id)} data-reveal>
+          {lead && <img src={lead.src} alt={category.name} loading="lazy" decoding="async" />}
+          <span>{products.length} {itemLabel}</span>
+          <h3>{category.name}</h3>
+          <p>{categoryDescription(category, locale)}</p>
+        </a>
+      );
+    })
+  }
+</div>

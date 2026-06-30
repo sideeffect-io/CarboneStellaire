@@ -1,0 +1,25 @@
+---
+import { shouldShowPrices, type Product } from "@/lib/catalog";
+import { formatPrice, productPath, type Locale } from "@/lib/i18n";
+
+interface Props {
+  product: Product;
+  locale: Locale;
+}
+
+const { product, locale } = Astro.props;
+const image = product.images[0];
+const showPrices = shouldShowPrices();
+---
+
+<article class="product-card" data-reveal>
+  <a href={productPath(locale, product.handle)} aria-label={product.title}>
+    <figure>
+      <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+    </figure>
+    <div class="product-card__body">
+      <h3>{product.title}</h3>
+      {showPrices && <p>{formatPrice(product.price, locale)}</p>}
+    </div>
+  </a>
+</article>

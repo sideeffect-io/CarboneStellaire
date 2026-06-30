@@ -1,0 +1,55 @@
+---
+import ProductGrid from "@/components/ProductGrid.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import {
+  categories,
+  categoryDescription,
+  categoryDetailHtml,
+  getProductsByCategory,
+  type Category
+} from "@/lib/catalog";
+import { categoryPath, ui } from "@/lib/i18n";
+
+export function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { category: category.id },
+    props: { category }
+  }));
+}
+
+const locale = "fr";
+const { category } = Astro.props as { category: Category };
+const products = getProductsByCategory(locale, category.id);
+const lead = products[0]?.images[0];
+const detailHtml = categoryDetailHtml(category, locale);
+---
+
+<BaseLayout
+  title={category.name}
+  description={categoryDescription(category, locale)}
+  locale={locale}
+  alternatePath={categoryPath("en", category.id)}
+>
+  <section class="page-hero page-hero--compact">
+    {lead && <img src={lead.src} alt={category.name} loading="eager" decoding="async" />}
+    <div>
+      <p class="eyebrow">{ui[locale].sections.catalog}</p>
+      <h1>{category.name}</h1>
+      <p>{categoryDescription(category, locale)}</p>
+    </div>
+  </section>
+  {
+    detailHtml && (
+      <section class="section range-detail" data-reveal>
+        <div class="section-heading">
+          <p class="eyebrow">{ui[locale].sections.catalog}</p>
+          <h2>{ui[locale].sections.rangeStory}</h2>
+        </div>
+        <div class="rich-text range-detail__body" set:html={detailHtml} />
+      </section>
+    )
+  }
+  <section class="section">
+    <ProductGrid products={products} locale={locale} />
+  </section>
+</BaseLayout>

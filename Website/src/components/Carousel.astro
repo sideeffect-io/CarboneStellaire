@@ -1,0 +1,22 @@
+---
+import carouselImages from "@/data/carousel.generated.json";
+import type { Locale } from "@/lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="image-carousel" data-carousel data-reveal aria-label="Carbone Stellaire carousel">
+  <div class="carousel-track" data-carousel-track>
+    {
+      carouselImages.map((image, index) => (
+        <figure class={`carousel-frame carousel-frame--${index % 3}`}>
+          <img src={image.src} alt={image.alt[locale]} loading={index < 2 ? "eager" : "lazy"} decoding="async" />
+        </figure>
+      ))
+    }
+  </div>
+</section>

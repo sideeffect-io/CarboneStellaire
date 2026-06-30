@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { contactPath, homePath, ui } from "@/lib/i18n";
+
+const locale = "fr";
+const copy = ui[locale].contact;
+---
+
+<BaseLayout title={copy.thanksTitle} description={copy.thanksBody} locale={locale} alternatePath="/en/thanks/">
+  <section class="thanks-page" data-reveal>
+    <p class="eyebrow">Carbone Stellaire</p>
+    <h1>{copy.thanksTitle}</h1>
+    <p>{copy.thanksBody}</p>
+    <div class="hero__actions">
+      <a class="button button--primary" href={homePath(locale)}>Accueil</a>
+      <a class="button button--ghost" href={contactPath(locale)}>Nouveau message</a>
+    </div>
+  </section>
+</BaseLayout>

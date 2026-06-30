@@ -1,0 +1,20 @@
+---
+import ContactForm from "@/components/ContactForm.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { ui } from "@/lib/i18n";
+
+const locale = "en";
+const copy = ui[locale].contact;
+---
+
+<BaseLayout title={copy.title} description={copy.intro} locale={locale} alternatePath="/contact/">
+  <section class="contact-page">
+    <div class="contact-page__copy" data-reveal>
+      <p class="eyebrow">Carbone Stellaire</p>
+      <h1>{copy.title}</h1>
+      <p>{copy.intro}</p>
+      <p>{copy.fallback} <a href="mailto:thibault@carbonestellaire.fr">thibault@carbonestellaire.fr</a>.</p>
+    </div>
+    <ContactForm locale={locale} />
+  </section>
+</BaseLayout>
