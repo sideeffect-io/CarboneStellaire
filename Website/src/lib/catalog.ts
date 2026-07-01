@@ -223,3 +223,7 @@ export function categoryDetailHtml(category: Category, locale: Locale) {
 export function shouldShowPrices() {
   return catalogSettings.showPrices;
 }
+
+export function shouldShowProductPrice(product: Pick<Product, "price">) {
+  return shouldShowPrices() && Boolean(product.price.trim());
+}

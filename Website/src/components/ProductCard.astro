@@ -1,5 +1,5 @@
 ---
-import { shouldShowPrices, type Product } from "@/lib/catalog";
+import { shouldShowProductPrice, type Product } from "@/lib/catalog";
 import { formatPrice, productPath, type Locale } from "@/lib/i18n";
 
 interface Props {
@@ -9,17 +9,17 @@ interface Props {
 
 const { product, locale } = Astro.props;
 const image = product.images[0];
-const showPrices = shouldShowPrices();
+const showPrice = shouldShowProductPrice(product);
 ---
 
-<article class:list={["product-card", !showPrices && "product-card--price-hidden"]} data-reveal>
+<article class:list={["product-card", !showPrice && "product-card--price-hidden"]} data-reveal>
   <a href={productPath(locale, product.handle)} aria-label={product.title}>
     <figure>
       <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
     </figure>
     <div class="product-card__body">
       <h3>{product.title}</h3>
-      {showPrices && <p>{formatPrice(product.price, locale)}</p>}
+      {showPrice && <p>{formatPrice(product.price, locale)}</p>}
     </div>
   </a>
 </article>

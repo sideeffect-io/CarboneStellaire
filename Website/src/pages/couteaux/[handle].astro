@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCategory, getProducts, shouldShowPrices, type Product } from "@/lib/catalog";
+import { getCategory, getProducts, shouldShowProductPrice, type Product } from "@/lib/catalog";
 import { categoryPath, contactPath, formatPrice, productPath, ui } from "@/lib/i18n";
 
 export function getStaticPaths() {
@@ -14,8 +14,8 @@ const locale = "fr";
 const { product } = Astro.props as { product: Product };
 const category = getCategory(product.category);
 const contactHref = `${contactPath(locale)}?knife=${encodeURIComponent(product.title)}`;
-const showPrices = shouldShowPrices();
-const pageDescription = showPrices ? `${product.title} - ${formatPrice(product.price, locale)}.` : `${product.title}.`;
+const showPrice = shouldShowProductPrice(product);
+const pageDescription = showPrice ? `${product.title} - ${formatPrice(product.price, locale)}.` : `${product.title}.`;
 ---
 
 <BaseLayout
@@ -58,7 +58,7 @@ const pageDescription = showPrices ? `${product.title} - ${formatPrice(product.p
         <a class="back-link" href={categoryPath(locale, category.id)}>{ui[locale].product.backToRange}</a>
         <p class="eyebrow">{ui[locale].product.from} / {category.name}</p>
         <h1>{product.title}</h1>
-        {showPrices && <p class="product-price">{formatPrice(product.price, locale)}</p>}
+        {showPrice && <p class="product-price">{formatPrice(product.price, locale)}</p>}
         <a class="button button--primary" href={contactHref}>{ui[locale].product.contact}</a>
       </div>
     </section>
