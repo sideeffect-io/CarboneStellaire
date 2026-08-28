@@ -77,6 +77,19 @@ async function runCommand(command, args, options = {}) {
   });
 }
 
+async function ensureWebsiteDependencies() {
+  const astroPath = path.join(store.siteRoot, "node_modules", ".bin", "astro");
+  try {
+    const info = await stat(astroPath);
+    if (info.isFile()) return;
+  } catch {
+    // Install below when dependencies have not been prepared yet.
+  }
+
+  appendLog("Website dependencies are missing; installing them from package-lock.json.");
+  await runCommand("npm", ["ci"], { cwd: store.siteRoot });
+}
+
 async function startPreview() {
   if (previewProcess) {
     appendLog("Stopping previous local preview.");
@@ -112,6 +125,7 @@ function deployLocal() {
 
   (async () => {
     try {
+      await ensureWebsiteDependencies();
       await runCommand("npm", ["run", "validate:content"], { cwd: store.siteRoot });
       await runCommand("npm", ["run", "build"], { cwd: store.siteRoot });
       await startPreview();

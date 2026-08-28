@@ -3,6 +3,7 @@ import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
+import { normalizeImageFilename, uniqueImageFilename } from "../public/image-filenames.js";
 import {
   categoryFor,
   createStore,
@@ -12,6 +13,12 @@ import {
   validateCategories,
   validateHandle
 } from "../src/content-store.mjs";
+
+test("image filenames are normalized for web assets and made unique", () => {
+  assert.equal(normalizeImageFilename("IMG_4699 2.jpeg"), "IMG_4699-2.jpeg");
+  assert.equal(normalizeImageFilename("Lame finie à l'atelier.JPG"), "Lame-finie-a-l-atelier.jpg");
+  assert.equal(uniqueImageFilename("IMG_4699 2.jpeg", new Set(["IMG_4699-2.jpeg"])), "IMG_4699-2-2.jpeg");
+});
 
 async function fixture() {
   const repoRoot = await mkdtemp(path.join(os.tmpdir(), "carbone-admin-test-"));
@@ -230,4 +237,20 @@ test("product create and update write JSON and uploaded images inside Website/sr
   });
   assert.deepEqual(updated.images, ["image-001.jpg", "image-002.png"]);
   assert.equal(updated.categoryId, "fallback");
+});
+
+test("product creation normalizes spaces in uploaded image filenames", async () => {
+  const { siteRoot, store } = await fixture();
+  const created = await store.createProduct({
+    handle: "sample-spaced-image",
+    categoryId: "sample",
+    title: { fr: "Nouveau", en: "New" },
+    price: "150.00 EUR TTC",
+    description: { fr: "Description FR", en: "Description EN" },
+    images: ["IMG_4699 2.jpeg"],
+    uploads: [{ filename: "IMG_4699 2.jpeg", dataBase64: Buffer.from("jpeg").toString("base64") }]
+  });
+
+  assert.deepEqual(created.images, ["IMG_4699-2.jpeg"]);
+  assert.equal(await readFile(path.join(siteRoot, "src", "assets", "products", "sample-spaced-image", "IMG_4699-2.jpeg"), "utf8"), "jpeg");
 });

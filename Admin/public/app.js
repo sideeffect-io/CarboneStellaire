@@ -1,3 +1,5 @@
+import { uniqueImageFilename } from "./image-filenames.js";
+
 let state = null;
 let activeTab = "site";
 let selectedCategoryId = null;
@@ -271,7 +273,7 @@ async function saveSite() {
 
 async function saveCategory(event) {
   event.preventDefault();
-  const form = event.currentTarget;
+  const form = event.target;
   const field = (name) => form.elements.namedItem(name);
   const message = document.querySelector("#category-message");
   const payload = {
@@ -298,22 +300,24 @@ async function saveCategory(event) {
 }
 
 function readFiles(files) {
+  const filenames = new Set(productUploads.map((upload) => upload.filename));
   return Promise.all(
-    [...files].map(
-      (file) =>
-        new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve({ filename: file.name, dataBase64: reader.result });
-          reader.onerror = reject;
-          reader.readAsDataURL(file);
-        })
-    )
+    [...files].map((file) => {
+      const filename = uniqueImageFilename(file.name, filenames);
+      filenames.add(filename);
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve({ filename, dataBase64: reader.result });
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    })
   );
 }
 
 async function saveProduct(event) {
   event.preventDefault();
-  const form = event.currentTarget;
+  const form = event.target;
   const field = (name) => form.elements.namedItem(name);
   const message = document.querySelector("#product-message");
   const isNew = !selectedProductHandle;

@@ -2,6 +2,7 @@ import { mkdir, mkdtemp, readFile, readdir, rename, stat, writeFile } from "node
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { normalizeImageFilename } from "../public/image-filenames.js";
 
 const adminRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const defaultRepoRoot = path.resolve(adminRoot, "..");
@@ -308,8 +309,9 @@ export function stringifyProductMarkdown(product) {
 function validateImageFilename(filename) {
   assert(typeof filename === "string", "Image filename must be a string.");
   assert(!filename.includes("/") && !filename.includes("\\"), `Unsafe image filename: ${filename}`);
-  assert(/^[A-Za-z0-9._-]+\.(jpe?g|png|webp)$/i.test(filename), `Unsupported image filename: ${filename}`);
-  return filename;
+  const normalized = normalizeImageFilename(filename);
+  assert(/^[A-Za-z0-9._-]+\.(jpe?g|png|webp)$/i.test(normalized), `Unsupported image filename: ${filename}`);
+  return normalized;
 }
 
 function normalizeProductInput(input, forcedHandle) {
